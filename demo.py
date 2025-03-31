@@ -1,4 +1,4 @@
-# Copyleft 🄯, 2025, Germano Castanho;
+# Copyleft 🄯 2025, Germano Castanho;
 # Software livre licenciado sob a GPL-3.0;
 # Cada linha, um manifesto pela liberdade!
 
