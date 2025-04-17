@@ -99,7 +99,6 @@ demo = gr.ChatInterface(
     textbox=gr.MultimodalTextbox(
         sources=[],
         placeholder="Filosofe com Sócrates...",
-        autofocus=False,
         autoscroll=False,
         stop_btn=True,
     ),
@@ -110,20 +109,18 @@ demo = gr.ChatInterface(
         "Estou repleto de dúvidas, Sócrates!",
     ],
     example_icons=[
-        "assets/icons.png",
-        "assets/icons.png",
-        "assets/icons.png",
+        "assets/icons.svg",
+        "assets/icons.svg",
+        "assets/icons.svg",
     ],
     run_examples_on_click=True,
     title="Sócrates 📖",
     description="Seu Chatbot de Dialética Artificial",
     theme="gstaff/xkcd",
-    flagging_mode="manual",
     css="""footer, .gradio-footer {
         visibility: hidden !important;
     }""",
     analytics_enabled=False,
-    autofocus=False,
     autoscroll=False,
     stop_btn=True,
 )
