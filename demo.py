@@ -17,7 +17,7 @@ from langchain_text_splitters import RecursiveCharacterTextSplitter
 _ = load_dotenv(find_dotenv())
 
 
-KNOWLEDGE = Path(__file__).parent / "data" / "book.pdf"
+DOCS = Path(__file__).parent / "data"
 
 
 MODEL = ChatOpenAI(
@@ -57,13 +57,16 @@ PROMPT = ChatPromptTemplate.from_template("""#### PERSONA
 
 
 # DOCUMENT LOADING
-loader = PyPDFLoader(KNOWLEDGE)
-loaded_docs = loader.load()
+docs_list = []
+for doc in DOCS.glob("*.pdf"):
+    loader = PyPDFLoader(doc)
+    loaded_docs = loader.load()
+    docs_list.extend(loaded_docs)
 
 
 # TEXT SPLITTING
 splitter = RecursiveCharacterTextSplitter(chunk_size=1000, chunk_overlap=100)
-chunks = splitter.split_documents(loaded_docs)
+chunks = splitter.split_documents(docs_list)
 
 
 # VECTOR STORE
