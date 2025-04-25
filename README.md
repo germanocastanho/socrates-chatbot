@@ -19,6 +19,12 @@ Fruto de reflexões da disciplina "**LabTec Cultura Digital**", do [Curso de Fil
 
 Para facilitar a experimentação, o projeto também se encontra disponível na plataforma Hugging Face, permitindo que qualquer pessoa possa interagir com o chatbot de maneira eficiente, sem necessidade de instalação local. Para tanto, basta acessar [**este link**](https://huggingface.co/spaces/germanocastanho/socrates-chatbot) e começar a filosofar com Sócrates! 💭
 
+# ✅ Pré-requisitos
+
+- Python 3.12 ou superior, disponível através do [**site oficial**](https://www.python.org/downloads/).
+- Chave API da OpenAI, acessível através da [**plataforma**](https://platform.openai.com/login).
+- Arquivo `.env` com a variável `OPENAI_API_KEY` configurada.
+
 # 🛠️ Instalação Local
 
 ```bash
